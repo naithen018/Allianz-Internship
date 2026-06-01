@@ -8,26 +8,15 @@ The system generates synthetic application logs, processes them in a streaming m
 
 ## Architecture
 
-```text
-Synthetic Log Generator
-          │
-          ▼
-      Log Files
-          │
-          ▼
-   Log Processor
-          │
-          ├──────────────► Service Analytics
-          │
-          ├──────────────► Error Analysis
-          │
-          └──────────────► Sliding Window
-                                │
-                                ▼
-                        Anomaly Detection
-                                │
-                                ▼
-                         summary.json
+```mermaid
+flowchart TD
+    A[Synthetic Log Generator] --> B[Log Files]
+    B --> C[Log Processor]
+    C --> D[Service Analytics]
+    C --> E[Error Analysis]
+    C --> F[Sliding Window Detection]
+    F --> G[Anomaly Detection]
+    G --> H[summary.json]
 ```
 
 ## Features
