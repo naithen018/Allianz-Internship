@@ -83,29 +83,14 @@ log-analytics-system/
 * Memory-Efficient Streaming
 * Time-Series Analytics
 
-## Running the Project
 
-Generate logs, process them, and create the summary report:
+## Execution Example
 
-```bash
-python src/main.py
-```
+![Execution](screenshots/execution.png)
 
-## Sample Output
+## Sample Summary
 
-Example summary:
-
-```json
-{
-    "total_logs": 25000,
-    "top_services": {
-        "auth_service": 5230,
-        "payment_service": 4971
-    },
-    "error_count": 731,
-    "anomalies_detected": 12
-}
-```
+![Summary](screenshots/summary-json.png)
 
 ## Future Improvements
 
