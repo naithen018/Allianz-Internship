@@ -91,23 +91,21 @@ Generate logs, process them, and create the summary report:
 python src/main.py
 ```
 
-## Output
+## Sample Output
 
-The system generates:
+Example summary:
 
-```text
-data/logs/
+```json
+{
+    "total_logs": 25000,
+    "top_services": {
+        "auth_service": 5230,
+        "payment_service": 4971
+    },
+    "error_count": 731,
+    "anomalies_detected": 12
+}
 ```
-
-Synthetic log files.
-
-and
-
-```text
-data/output/summary.json
-```
-
-Analytics summary report.
 
 ## Future Improvements
 
